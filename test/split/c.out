@@ -1,0 +1,10 @@
+mode: set
+test/split/split.go:9.44,12.17 3 1
+test/split/split.go:22.2,22.18 1 1
+test/split/split.go:25.2,25.12 1 1
+test/split/split.go:12.17,13.16 1 1
+test/split/split.go:16.3,16.18 1 1
+test/split/split.go:19.3,20.33 2 1
+test/split/split.go:13.16,15.4 1 1
+test/split/split.go:16.18,18.4 1 0
+test/split/split.go:22.18,24.3 1 1

@@ -1,0 +1,4 @@
+[2020-03-26 21:53:17] [ERROR] [main.go:main:13] 这是一条Error日志
+[2020-03-26 21:53:17] [FATAL] [main.go:main:14] 这是一条Fatal日志
+[2020-03-26 21:54:04] [ERROR] [main.go:main:13] 这是一条Error日志
+[2020-03-26 21:54:04] [FATAL] [main.go:main:14] 这是一条Fatal日志
