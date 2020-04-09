@@ -56,7 +56,8 @@ func main() {
 	// }
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
-	_, err = cli.Put(ctx, "/logagetn/collec_config", `[{"path":"/tmp/nginx.log","topic":"web_log"},{"path":"/tmp/redis.log","topic":"redis_log"},{"path":"/tmp/mysql.log","topic":"mysql_log"}]`)
+	// _, err = cli.Put(ctx, "/logagent/192.168.5.6/collec_config", `[{"path":"/home/sxt/nginx.log","topic":"web_log"}]`)
+	_, err = cli.Put(ctx, "/logagent/192.168.5.6/collec_config", `[{"path":"/home/sxt/nginx.log","topic":"web_log"},{"path":"/home/sxt/redis.log","topic":"redis_log"},{"path":"/home/sxt/mysql.log","topic":"mysql_log"}]`)
 	cancel()
 	if err != nil {
 		panic(err)

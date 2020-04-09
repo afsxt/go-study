@@ -3,6 +3,7 @@ package etcd
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"time"
 
 	"go.etcd.io/etcd/clientv3"
@@ -42,4 +43,21 @@ func GetConf(key string) (logEntryConf []*LogEntry, err error) {
 		}
 	}
 	return
+}
+
+func WatchConf(key string, newConfCh chan<- []*LogEntry) {
+	ch := cli.Watch(context.Background(), key)
+	for wresp := range ch {
+		for _, evt := range wresp.Events {
+			var newConf []*LogEntry
+			if evt.Type != clientv3.EventTypeDelete {
+				err := json.Unmarshal(evt.Kv.Value, &newConf)
+				if err != nil {
+					fmt.Println("unmarshal failed, err:", err)
+					continue
+				}
+			}
+			newConfCh <- newConf
+		}
+	}
 }

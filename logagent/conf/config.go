@@ -13,8 +13,8 @@ type EtcdConf struct {
 }
 
 type KafkaConf struct {
-	Address string `ini:"address"`
-	Topic   string `ini:"topic"`
+	Address     string `ini:"address"`
+	ChanMaxSize int    `ini:"chanMaxSize"`
 }
 
 type TaillogConf struct {

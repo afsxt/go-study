@@ -1,6 +1,10 @@
 package taillog
 
 import (
+	"context"
+	"fmt"
+	"logagent/kafka"
+
 	"github.com/hpcloud/tail"
 )
 
@@ -10,8 +14,30 @@ var (
 	tailObj *tail.Tail
 )
 
-// Init 初使化
-func Init(fileName string) (err error) {
+type TailTask struct {
+	path       string
+	topic      string
+	instance   *tail.Tail
+	ctx        context.Context
+	cancelFunc context.CancelFunc
+}
+
+func NewTailTask(path, topic string) (tailObj *TailTask) {
+	ctx, cancel := context.WithCancel(context.Background())
+	tailObj = &TailTask{
+		path:       path,
+		topic:      topic,
+		ctx:        ctx,
+		cancelFunc: cancel,
+	}
+	err := tailObj.init()
+	if err != nil {
+		panic(err)
+	}
+	return
+}
+
+func (t *TailTask) init() (err error) {
 	config := tail.Config{
 		ReOpen:    true,
 		Follow:    true,
@@ -19,12 +45,22 @@ func Init(fileName string) (err error) {
 		MustExist: false,
 		Poll:      true,
 	}
-	tailObj, err = tail.TailFile(fileName, config)
 
+	t.instance, err = tail.TailFile(t.path, config)
+
+	go t.run()
 	return
 }
 
-// ReadChan 读取日志
-func ReadChan() <-chan *tail.Line {
-	return tailObj.Lines
+func (t *TailTask) run() {
+	for {
+		select {
+		case <-t.ctx.Done():
+			fmt.Printf("tail task: %s结束\n", t.path)
+			return
+		case line := <-t.instance.Lines:
+			// kafka.SendToKafka(t.topic, line.Text)
+			kafka.SendToChan(t.topic, line.Text)
+		}
+	}
 }
