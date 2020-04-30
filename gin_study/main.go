@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"text/template"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -19,10 +20,35 @@ func MiddleWareTest() gin.HandlerFunc {
 	}
 }
 
+type Person struct {
+	Name string
+	Age  int
+	Sex  string
+}
+
+func sayHello(c *gin.Context) {
+	t, err := template.ParseFiles("./hello.tmpl")
+	if err != nil {
+		log.Fatalln(err)
+		return
+	}
+
+	err = t.Execute(c.Writer, Person{
+		Name: "sxt",
+		Age:  32,
+		Sex:  "男",
+	})
+	if err != nil {
+		panic(err)
+	}
+}
+
 //-----------------------------------------------------------------------------
 func main() {
 	r := gin.Default()
 	r.Use(MiddleWareTest())
+
+	r.GET("/hello", sayHello)
 
 	r.GET("/user/:name/*action", func(c *gin.Context) {
 		name := c.Param("name")
