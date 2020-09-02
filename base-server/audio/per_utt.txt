@@ -1,0 +1,204 @@
+tts_0 ref  明  天  可  能  会  下  雨
+tts_0 hyp  明  天  可  能  会  下  雨
+tts_0 op   C  C  C  C  C  C  C
+tts_0 #csid 7 0 0 0
+tts_1 ref  我  的  钱  快  要  用  完  了
+tts_1 hyp  我  的  钱  快  要  用  完  了
+tts_1 op   C  C  C  C  C  C  C  C
+tts_1 #csid 8 0 0 0
+tts_10 ref  我  今  年  二  十  二  岁
+tts_10 hyp  我  今  年  二  十  撼  碎
+tts_10 op   C  C  C  C  C  S  S
+tts_10 #csid 5 2 0 0
+tts_11 ref  你  下  班  了  吗
+tts_11 hyp  你  下  班  了  吗
+tts_11 op   C  C  C  C  C
+tts_11 #csid 5 0 0 0
+tts_12 ref  我  的  任  务  做  完  了
+tts_12 hyp  我  的  任  务  错  完  了
+tts_12 op   C  C  C  C  S  C  C
+tts_12 #csid 6 1 0 0
+tts_13 ref  你  的  身  体  还  好  吗
+tts_13 hyp  你  的  身  体  还  好  吗
+tts_13 op   C  C  C  C  C  C  C
+tts_13 #csid 7 0 0 0
+tts_14 ref  他  现  在  在  哪  里
+tts_14 hyp  他  现  在  在  哪  里
+tts_14 op   C  C  C  C  C  C
+tts_14 #csid 6 0 0 0
+tts_15 ref  我  试  试  看  吧
+tts_15 hyp  我  信  息  看  吧
+tts_15 op   C  S  S  C  C
+tts_15 #csid 3 2 0 0
+tts_16 ref  他  是  我  们  的  老  板
+tts_16 hyp  他  系  我  们  的  老  板
+tts_16 op   C  S  C  C  C  C  C
+tts_16 #csid 6 1 0 0
+tts_17 ref  你  可  以  帮  帮  我  吗
+tts_17 hyp  你  可  以  帮  帮  我  吗
+tts_17 op   C  C  C  C  C  C  C
+tts_17 #csid 7 0 0 0
+tts_18 ref  卫  生  间  在  哪  里
+tts_18 hyp  卫  生  间  在  哪  里
+tts_18 op   C  C  C  C  C  C
+tts_18 #csid 6 0 0 0
+tts_19 ref  这  部  电  视  剧  真  好  看
+tts_19 hyp  这  部  电  视  剧  真  好  看
+tts_19 op   C  C  C  C  C  C  C  C
+tts_19 #csid 8 0 0 0
+tts_2 ref  请  问  您  怎  么  称  呼
+tts_2 hyp  请  问  您  怎  么  称  唿
+tts_2 op   C  C  C  C  C  C  S
+tts_2 #csid 6 1 0 0
+tts_20 ref  你  的  爱  好  是  什  么
+tts_20 hyp  你  的  爱  好  是  什  么
+tts_20 op   C  C  C  C  C  C  C
+tts_20 #csid 7 0 0 0
+tts_21 ref  我  很  喜  欢  交  朋  友
+tts_21 hyp  我  很  喜  欢  交  朋  友
+tts_21 op   C  C  C  C  C  C  C
+tts_21 #csid 7 0 0 0
+tts_22 ref  今  天  是  我  的  生  日
+tts_22 hyp  今  天  是  我  的  生  日
+tts_22 op   C  C  C  C  C  C  C
+tts_22 #csid 7 0 0 0
+tts_23 ref  你  什  么  时  候  下  课  啊
+tts_23 hyp  你  什  么  时  候  下  课  啊
+tts_23 op   C  C  C  C  C  C  C  C
+tts_23 #csid 8 0 0 0
+tts_24 ref  我  在  老  地  方  等  你
+tts_24 hyp  我  在  老  地  方  等  你
+tts_24 op   C  C  C  C  C  C  C
+tts_24 #csid 7 0 0 0
+tts_25 ref  比  赛  马  上  要  开  始  了
+tts_25 hyp  比  赛  马  上  要  开  始  了
+tts_25 op   C  C  C  C  C  C  C  C
+tts_25 #csid 8 0 0 0
+tts_26 ref  我  不  认  识  汤  姆
+tts_26 hyp  我  不  认  识  汤  姆
+tts_26 op   C  C  C  C  C  C
+tts_26 #csid 6 0 0 0
+tts_27 ref  要  不  然  就  请  个  假  吧
+tts_27 hyp  要  不  然  就  请  个  假  吧
+tts_27 op   C  C  C  C  C  C  C  C
+tts_27 #csid 8 0 0 0
+tts_28 ref  麦  克  现  在  在  家  吗
+tts_28 hyp  麦  克  现  在  在  家  吗
+tts_28 op   C  C  C  C  C  C  C
+tts_28 #csid 7 0 0 0
+tts_29 ref  你  平  时  玩  微  信  吗
+tts_29 hyp  你  平  时  玩  微  信  吗
+tts_29 op   C  C  C  C  C  C  C
+tts_29 #csid 7 0 0 0
+tts_3 ref  我  的  中  文  名  叫  刘  翔
+tts_3 hyp  我  的  中  文  名  叫  刘  翔
+tts_3 op   C  C  C  C  C  C  C  C
+tts_3 #csid 8 0 0 0
+tts_30 ref  你  有  他  的  手  机  号  吗
+tts_30 hyp  你  有  他  的  手  机  号  码
+tts_30 op   C  C  C  C  C  C  C  S
+tts_30 #csid 7 1 0 0
+tts_31 ref  我  也  想  学  汉  语
+tts_31 hyp  我  也  想  学  汉  语
+tts_31 op   C  C  C  C  C  C
+tts_31 #csid 6 0 0 0
+tts_32 ref  艾  米  去  年  来  过  中  国
+tts_32 hyp  爱  你  去  年  来  过  中  国
+tts_32 op   S  S  C  C  C  C  C  C
+tts_32 #csid 6 2 0 0
+tts_33 ref  这  部  手  机  怎  么  卖
+tts_33 hyp  这  部  手  机  怎  么  卖
+tts_33 op   C  C  C  C  C  C  C
+tts_33 #csid 7 0 0 0
+tts_34 ref  我  打  算  暑  假  去  旅  游
+tts_34 hyp  我  打  算  暑  假  去  旅  游
+tts_34 op   C  C  C  C  C  C  C  C
+tts_34 #csid 8 0 0 0
+tts_35 ref  你  现  在  在  干  嘛  呢
+tts_35 hyp  你  现  在  在  干  嘛  呢
+tts_35 op   C  C  C  C  C  C  C
+tts_35 #csid 7 0 0 0
+tts_36 ref  离  考  试  只  有  一  个  月  了
+tts_36 hyp  李  考  系  及  有  一  个  月  了
+tts_36 op   S  C  S  S  C  C  C  C  C
+tts_36 #csid 6 3 0 0
+tts_37 ref  谢  谢  你  告  诉  我  这  些
+tts_37 hyp  谢  谢  你  告  诉  我  这  些
+tts_37 op   C  C  C  C  C  C  C  C
+tts_37 #csid 8 0 0 0
+tts_38 ref  我  们  很  久  没  联  系  了
+tts_38 hyp  我  们  很  久  过  联  系  了
+tts_38 op   C  C  C  C  S  C  C  C
+tts_38 #csid 7 1 0 0
+tts_39 ref  ***  这  哥  们  儿  太  好  吃  了
+tts_39 hyp   大   舅  哥  们  而  太  好  吃  了
+tts_39 op    I   S  C  C  S  C  C  C  C
+tts_39 #csid 6 2 1 0
+tts_4 ref  很  高  兴   认   识  你
+tts_4 hyp  很  高  兴  ***  任  性
+tts_4 op   C  C  C   D   S  S
+tts_4 #csid 3 2 0 1
+tts_40 ref  你  结  婚  了  吗
+tts_40 hyp  你  结  婚  了  吗
+tts_40 op   C  C  C  C  C
+tts_40 #csid 5 0 0 0
+tts_41 ref  你  的  工  作  怎  么  样
+tts_41 hyp  你  的  工  作  怎  么  样
+tts_41 op   C  C  C  C  C  C  C
+tts_41 #csid 7 0 0 0
+tts_42 ref  这  件  衣  服  很  漂  亮
+tts_42 hyp  这  件  衣  服  很  漂  亮
+tts_42 op   C  C  C  C  C  C  C
+tts_42 #csid 7 0 0 0
+tts_43 ref  ***  杰  克  还  没  学  会  用  筷  子
+tts_43 hyp   一   节  课  还  没  学  会  用  筷  子
+tts_43 op    I   S  S  C  C  C  C  C  C  C
+tts_43 #csid 7 2 1 0
+tts_44 ref  你  吃  过  早  餐  了  吗
+tts_44 hyp  你  吃  过  早  餐  了  吗
+tts_44 op   C  C  C  C  C  C  C
+tts_44 #csid 7 0 0 0
+tts_45 ref  屋  子  里  太  乱  了
+tts_45 hyp  屋  子  里  太  慢  了
+tts_45 op   C  C  C  C  S  C
+tts_45 #csid 5 1 0 0
+tts_46 ref  我  姐  在  学  校  里  当  老  师
+tts_46 hyp  我  姐  在  学  校  里  当  老  师
+tts_46 op   C  C  C  C  C  C  C  C  C
+tts_46 #csid 9 0 0 0
+tts_47 ref  今  天  天  气  很  好
+tts_47 hyp  今  天  天  气  很  好
+tts_47 op   C  C  C  C  C  C
+tts_47 #csid 6 0 0 0
+tts_48 ref  现  在  纽  约  时  间  是  几  点
+tts_48 hyp  现  在  纽  约  时  间  是  几  点
+tts_48 op   C  C  C  C  C  C  C  C  C
+tts_48 #csid 9 0 0 0
+tts_49 ref  你  点  了  几  个  菜
+tts_49 hyp  你  点  了  几  个  菜
+tts_49 op   C  C  C  C  C  C
+tts_49 #csid 6 0 0 0
+tts_5 ref  你  还  记  得  我  吗
+tts_5 hyp  你  还  记  得  我  吗
+tts_5 op   C  C  C  C  C  C
+tts_5 #csid 6 0 0 0
+tts_50 ref  为  什  么  你  不  理  我
+tts_50 hyp  为  什  么  你  不  理  我
+tts_50 op   C  C  C  C  C  C  C
+tts_50 #csid 7 0 0 0
+tts_6 ref  他  来  自  哪  里
+tts_6 hyp  他  来  自  哪  里
+tts_6 op   C  C  C  C  C
+tts_6 #csid 5 0 0 0
+tts_7 ref  他  是  我  们  的  榜  样
+tts_7 hyp  他  是  我  们  的  榜  样
+tts_7 op   C  C  C  C  C  C  C
+tts_7 #csid 7 0 0 0
+tts_8 ref  我  昨  晚  做  了  一  个  梦
+tts_8 hyp  我  昨  晚  做  了  一  个  梦
+tts_8 op   C  C  C  C  C  C  C  C
+tts_8 #csid 8 0 0 0
+tts_9 ref  别  忘  了  扔  垃  圾
+tts_9 hyp  别  忘  了  扔  垃  圾
+tts_9 op   C  C  C  C  C  C
+tts_9 #csid 6 0 0 0

@@ -1,45 +1,75 @@
 package main
 
 import (
+	"bufio"
 	"context"
 	"fmt"
-	"time"
+	"log"
+	"os"
 
-	"go.etcd.io/etcd/clientv3"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-// etcd client put/get demo
-// use etcd/clientv3
+// Annotation ...
+type Annotation struct {
+	Status int
+	File   string
+	Text   string
+	Gender int
+}
 
 func main() {
-	cli, err := clientv3.New(clientv3.Config{
-		Endpoints:   []string{"127.0.0.1:2379"},
-		DialTimeout: 5 * time.Second,
-	})
+	// 设置客户端连接配置
+	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
+
+	// 连接到MongoDB
+	client, err := mongo.Connect(context.TODO(), clientOptions)
 	if err != nil {
-		// handle error!
-		fmt.Printf("connect to etcd failed, err:%v\n", err)
-		return
+		log.Fatal(err)
 	}
-	fmt.Println("connect to etcd success")
-	defer cli.Close()
-	// put
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
-	_, err = cli.Put(ctx, "/logagent/192.168.0.108/collec_config", `[{"path":"/home/sxt/nginx.log","topic":"web_log"},{"path":"/home/sxt/redis.log","topic":"redis_log"},{"path":"/home/sxt/mysql.log","topic":"mysql_log"}]`)
-	cancel()
+
+	findOptions := options.Find()
+	// findOptions.SetLimit(2)
+	collection := client.Database("maybe-data").Collection("annotations")
+	var results []Annotation
+	cur, err := collection.Find(context.TODO(), bson.D{{}}, findOptions)
 	if err != nil {
-		fmt.Printf("put to etcd failed, err:%v\n", err)
-		return
+		panic(err)
 	}
-	// get
-	ctx, cancel = context.WithTimeout(context.Background(), time.Second)
-	resp, err := cli.Get(ctx, "/logagent/192.168.0.108/collec_config")
-	cancel()
+
+	f, err := os.Create("delete.txt")
 	if err != nil {
-		fmt.Printf("get from etcd failed, err:%v\n", err)
-		return
+		panic(err)
 	}
-	for _, ev := range resp.Kvs {
-		fmt.Printf("%s:%s\n", ev.Key, ev.Value)
+	defer f.Close()
+	w := bufio.NewWriter(f)
+
+	// 查找多个文档返回一个光标
+	// 遍历游标允许我们一次解码一个文档
+	for cur.Next(context.TODO()) {
+		// 创建一个值，将单个文档解码为该值
+		var elem Annotation
+		err := cur.Decode(&elem)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		if elem.Status == -1 {
+			results = append(results, elem)
+			lineStr := fmt.Sprintf("%s", elem.File)
+			fmt.Fprintln(w, lineStr)
+		}
 	}
+
+	if err := cur.Err(); err != nil {
+		panic(err)
+	}
+
+	// 完成后关闭游标
+	cur.Close(context.TODO())
+
+	w.Flush()
+	fmt.Printf("Found multiple documents (array of pointers): %#v\n", len(results))
 }
